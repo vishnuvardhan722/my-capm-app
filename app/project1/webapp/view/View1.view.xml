@@ -1,0 +1,124 @@
+<mvc:View controllerName="project1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" displayBlock="true" xmlns="sap.m" xmlns:form="sap.ui.layout.form" xmlns:ui="sap.ui.table">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <form:SimpleForm id="bookForm" editable="true" layout="ResponsiveGridLayout">
+                <Label id="_IDGenLabel1" text="Book Title"/>
+                <Input id="bookTitleInput" value=""/>
+                <Label id="_IDGenLabel2" text="Author"/>
+                <Input id="authorInput" value=""/>
+                <Label id="_IDGenLabel3" text="Stock"/>
+                <Input id="stockInput" type="Number" value=""/>
+            </form:SimpleForm>
+
+            <form:SimpleForm id="Form2" editable="true" layout="ResponsiveGridLayout">
+                <Label id="name" text="Name"/>
+                <Input id="Iname" value=""/>
+                <Label id="Age" text="Age"/>
+                <Input id="Iage" value="" type="Number"/>
+                <Label id="Email" text="Email"/>
+                <Input id="IEmail" value="" type="Email"/>
+                <Label id="PhoneNumber" text="PhoneNumber"/>
+                <Input id="IPhoneNumber" value="" type="Tel" maxLength="10"/>
+                <Label id="Address" text="Address"/>
+                <Input id="IAddress" value=""/>
+                <Label id="Gender" text="Gender"/>
+                <RadioButtonGroup id="rbg3" columns="5" class="sapUiMediumMarginRight">
+                    <RadioButton id="RB3-1" text="Male"/>
+                    <RadioButton id="RB3-2" text="Female"/>
+                </RadioButtonGroup>
+            </form:SimpleForm>
+
+            <Toolbar id="tbar1">
+                <ToolbarSpacer id="tbspacer1"/>
+                <Button id="btInsert" text="Insert" icon="sap-icon://add" press="onPressInsert" type="Emphasized"/>
+                <Button id="btdelete" text="Delete" icon="sap-icon://delete" press="onPressDelete" type="Emphasized"/>
+            </Toolbar>
+
+            <ui:Table id="EmpTable" ariaLabelledBy="title" title="Posting SAP UI Table Data to CAPM Model" rows="{EmpModel>/TableDetails}" enableColumnFreeze="true">
+                <ui:columns>
+
+                    <ui:Column id="c2" width="15%" hAlign="Center">
+                        <Label id="l2" text="ID" textAlign="Center" width="100%"/>
+                        <ui:template>
+                            <Input id="text2" value="{EmpModel>Employee_ID}"/>
+                        </ui:template>
+                    </ui:Column>
+                    <ui:Column id="c3" width="25%" hAlign="Center">
+                        <Label id="l3" text="ProjectName" textAlign="Center" width="100%"/>
+                        <ui:template>
+                            <Input id="text3" value="{EmpModel>ProjectName}"/>
+                        </ui:template>
+                    </ui:Column>
+                    <ui:Column id="c4" width="6%" hAlign="Center">
+                        <Label id="l4" text="ProjectLocation" width="100%" textAlign="Center"/>
+                        <ui:template>
+                            <Input id="text4" value="{EmpModel>ProjectLocation}"/>
+                        </ui:template>
+                    </ui:Column>
+
+                </ui:columns>
+            </ui:Table>
+
+            <Table id="MyTable" items="{ReadingModel>/BookDetails/results}">
+                <columns>
+                    <Column id="_IDGenColumn0">
+                        <Text id="T0" text="ID"/>
+                    </Column>
+                    <Column id="_IDGenColumn">
+                        <Text id="T1" text="Name"/>
+                    </Column>
+                    <Column id="_IDGenColumn2">
+                        <Text id="T2" text="Author"/>
+                    </Column>
+                   
+                    <Column id="_IDGenColumn30">
+                        <Text id="T30" text="Gender"/>
+                        
+                    </Column>
+                     <Column id="_IDGenColumn3">
+                        <Text id="T3" text="Delete"/>
+                    </Column>
+                    <Column id="_IDGenColumn4">
+                        <Text id="T4" text="Edit"/>
+                    </Column>
+                </columns>
+                <ColumnListItem id="_IDGenColumnListItem">
+                    <cells>
+                        <Text id="0" text="{ReadingModel>ID}"/>
+                        <Text id="1" text="{ReadingModel>name}"/>
+                        <Text id="2" text="{ReadingModel>author}"/>
+                        <Text id="3" text="{ReadingModel>gender}"/>
+                        <Button id="BT1" icon="sap-icon://delete" press="onDelete"/>
+                        <Button id="BT2" text="Edit" press="onEdit"/>
+                    </cells>
+                </ColumnListItem>
+            </Table>
+
+
+            <Dialog id="myDialog" contentWidth="50%" contentHeight="30%">
+                <content>
+                    <form:SimpleForm id="Form6" editable="true" layout="ResponsiveGridLayout">
+                        <Label id="EID" text="ID"/>
+                        <Text id="TID" text="{ReadingModel>/ReadTableData/ID}"/>
+                        <Label id="EditL1" text="Name"/>
+                        <Input id="Editname" value="{ReadingModel>/ReadTableData/name}" width="50%"/>
+                        <Label id="EditL2" text="PhoneNumber"/>
+                        <Input id="EditPhoneNumber" value="{ReadingModel>/ReadTableData/PhoneNumber}" width="50%"/>
+                        <Label id="EditL3" text="'Author"/>
+                        <Input id="Editauthor" value="{ReadingModel>/ReadTableData/author}" width="50%"/>
+                    </form:SimpleForm>
+                </content>
+                <buttons>
+                    <Button id="_IDGenButton2" text="Save" press="onEditSave"/>
+                    <Button id="_IDGenButton4" text="Close" press="onEditClose"/>
+                </buttons>
+            </Dialog>
+            <Button
+            id="_IDGenButton" text="Create" press="onCreate"/>
+            <!-- <Button id="_IDGenButton1" text="Update" press="onUpdate" /> -->
+            <Button id="_IDGenButton3" text="Display" press="onDisplay"/>
+
+        </content>
+    </Page>
+</mvc:View>

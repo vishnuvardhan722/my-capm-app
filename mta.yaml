@@ -1,0 +1,33 @@
+_schema-version: '3.1.0'
+ID: Test2
+version: 1.0.0
+description: A simple CAP project.
+
+modules:
+  - name: Test2-db
+    type: hdb
+    path: db
+
+  - name: Test2-srv
+    type: nodejs
+    path: srv
+
+  - name: Test2-app
+    type: html5
+    path: app
+  - name: Test2-srv
+    type: nodejs
+    path: gen/srv
+    requires:
+      - name: Test2-auth
+
+resources:
+  - name: Test2-auth
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: xsuaa
+      service-plan: application
+      path: ./xs-security.json
+      config:
+        xsappname: Test2-${org}-${space}
+        tenant-mode: dedicated
