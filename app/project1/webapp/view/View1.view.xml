@@ -9,6 +9,7 @@
                 <Input id="authorInput" value=""/>
                 <Label id="_IDGenLabel3" text="Stock"/>
                 <Input id="stockInput" type="Number" value=""/>
+                
             </form:SimpleForm>
 
             <form:SimpleForm id="Form2" editable="true" layout="ResponsiveGridLayout">
