@@ -17,7 +17,7 @@ sap.ui.define([
             this.getView().getModel("EmpModel").setProperty("/TableDetails", []);
             this.byId("rbg3").setSelectedIndex(-1);
 
-            // testing git again
+            // testing 2
 
         },
 
