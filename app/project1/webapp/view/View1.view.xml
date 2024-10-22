@@ -9,6 +9,8 @@
                 <Input id="authorInput" value=""/>
                 <Label id="_IDGenLabel3" text="Stock"/>
                 <Input id="stockInput" type="Number" value=""/>
+
+                
                 
             </form:SimpleForm>
 
