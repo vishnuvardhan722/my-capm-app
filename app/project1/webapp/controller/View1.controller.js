@@ -17,7 +17,7 @@ sap.ui.define([
             this.getView().getModel("EmpModel").setProperty("/TableDetails", []);
             this.byId("rbg3").setSelectedIndex(-1);
 
-            // Today updating some code in view1 contoller file
+            // 22-10-2024 updating some code in view1 contoller file
 
         },
 
