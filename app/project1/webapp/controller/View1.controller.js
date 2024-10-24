@@ -16,7 +16,7 @@ sap.ui.define([
             this.getView().setModel(this.oEmpModel, "EmpModel");
             this.getView().getModel("EmpModel").setProperty("/TableDetails", []);
             this.byId("rbg3").setSelectedIndex(-1);
-            // testing branch git
+            // testing branch git again
 
             // 24-10-2024 updating some code in view1 contoller file yes
 
