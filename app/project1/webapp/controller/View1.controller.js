@@ -18,7 +18,7 @@ sap.ui.define([
             this.byId("rbg3").setSelectedIndex(-1);
             // testing 2
 
-            // 24-10-2024 updating some code in view1 contoller file
+            // 24-10-2024 updating some code in view1 contoller file yes
 
         },
 
