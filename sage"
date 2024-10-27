@@ -1,0 +1,17 @@
+credential.helper=/home/user/.bas-git/bas-git-helper-init.sh
+user.email=vishnuvardhankavitha75@gmail.com
+user.name=VENKATA VISHNU VARDHAN REDDY DUDDUKURI
+init.defaultbranch=main
+credential.https://github.com.helper=cache --timeout=86400
+credential.https://github.com.helper=/home/user/.bas-git/bas-git-helper.sh
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+remote.origin.url=https://github.com/vishnuvardhan722/my-capm-app.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.main.remote=origin
+branch.main.merge=refs/heads/main
+branch.testing.vscode-merge-base=origin/main
+branch.testing.remote=origin
+branch.testing.merge=refs/heads/testing
