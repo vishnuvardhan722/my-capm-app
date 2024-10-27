@@ -15,19 +15,5 @@ modules:
   - name: Test2-app
     type: html5
     path: app
-  - name: Test2-srv
-    type: nodejs
-    path: gen/srv
-    requires:
-      - name: Test2-auth
+    
 
-resources:
-  - name: Test2-auth
-    type: org.cloudfoundry.managed-service
-    parameters:
-      service: xsuaa
-      service-plan: application
-      path: ./xs-security.json
-      config:
-        xsappname: Test2-${org}-${space}
-        tenant-mode: dedicated
